@@ -26,11 +26,9 @@ class _ChatpageState extends State<Chatpage> {
                       Icons.arrow_back_ios,
                       color: Color(0xFFC199Cd),
                     ),
-                    SizedBox(
-                      width: 90,
-                    ),
+                   SizedBox(width: 110,),
                     Text(
-                      "Aashi Srivastava",
+                      "Amit Singh",
                       style: TextStyle(
                           fontSize: 18,
                           color: Color(0xFFC199Cd),
@@ -63,7 +61,7 @@ class _ChatpageState extends State<Chatpage> {
                             topRight: Radius.circular(10),
                             bottomLeft: Radius.circular(10))),
                     child: Text(
-                      "Hello Beba kaisi ho jaanu",
+                      "Hello ",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                     ),
@@ -75,7 +73,7 @@ class _ChatpageState extends State<Chatpage> {
                     padding: EdgeInsets.all(10),
                     margin: EdgeInsets.only(
                         right: MediaQuery.of(context).size.width / 3),
-                    alignment: Alignment.bottomRight,
+                    alignment: Alignment.bottomLeft,
                     decoration: BoxDecoration(
                         color: Color.fromARGB(255, 176, 210, 229),
                         borderRadius: BorderRadius.only(
@@ -83,7 +81,7 @@ class _ChatpageState extends State<Chatpage> {
                             topRight: Radius.circular(10),
                             bottomRight: Radius.circular(10))),
                     child: Text(
-                      "Reyanshh jaanu mai mst hun",
+                      "Hey ",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                     ),
