@@ -35,9 +35,9 @@ class _signupState extends State<signup> {
         Map<String, dynamic> userInfoMap = {
           "Name": namecontroller.text,
           "E-mail": mailcontroller.text,
-          "username": mailcontroller.text.replaceAll("@gmail.com", ""),
-          "Photo":
-              "https://firebasestorage.googleapis.com/v0/b/quickchatapp-42ddb.appspot.com/o/Screenshot%202024-03-02%20201710.png?alt=media&token=bcccadff-f1c5-4785-b123-44445cf7f571",
+          "username":updateusername.toUpperCase(),
+          "SearchKey":firstletter ,
+          "Photo":    "https://firebasestorage.googleapis.com/v0/b/quickchatapp-42ddb.appspot.com/o/Screenshot%202024-03-02%20201710.png?alt=media&token=bcccadff-f1c5-4785-b123-44445cf7f571",
           "Id": id,
         };
         await DatabaseMethods().addUserDetails(userInfoMap, id);
