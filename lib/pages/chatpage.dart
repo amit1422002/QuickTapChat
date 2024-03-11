@@ -1,8 +1,10 @@
+import 'package:QuickTapChat/pages/home.dart';
 import 'package:flutter/material.dart';
 
 class Chatpage extends StatefulWidget {
-  const Chatpage({super.key});
 
+ String name,profileurl,username;
+ Chatpage({required this.name,required this.profileurl,required this.username});
   @override
   State<Chatpage> createState() => _ChatpageState();
 }
@@ -22,9 +24,14 @@ class _ChatpageState extends State<Chatpage> {
                 padding: const EdgeInsets.only(left: 10),
                 child: Row(
                   children: [
-                    Icon(
-                      Icons.arrow_back_ios,
-                      color: Color(0xFFC199Cd),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+                      },
+                      child: Icon(
+                        Icons.arrow_back_ios,
+                        color: Color(0xFFC199Cd),
+                      ),
                     ),
                    SizedBox(width: 110,),
                     Text(

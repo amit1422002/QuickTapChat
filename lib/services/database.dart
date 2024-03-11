@@ -21,4 +21,20 @@ class DatabaseMethods {
         .where("SearchKey", isEqualTo: username.substring(0, 1).toUpperCase())
         .get();
   }
+
+  createChatRoom(
+      String ChatRoomId, Map<String, dynamic> chatRoomInfoMap) async {
+    final Snapshot = await FirebaseFirestore.instance
+        .collection("chatrooms")
+        .doc(ChatRoomId)
+        .get();
+    if (Snapshot.exists) {
+      return true;
+    } else {
+      return FirebaseFirestore.instance
+          .collection("chatrooms")
+          .doc(ChatRoomId)
+          .set(chatRoomInfoMap);
+    }
+  }
 }
